@@ -77,20 +77,6 @@ Following parameters were chosen:
 
 ### Testing
 
-Example of wrong classification (test image, first guess, second guess):
-
-![wrong][image2]
-
-```
-===================================
-i:  12563 , label:  30, guess:  21
-1 th guess is 21, prob: 0.47
-2 th guess is 30, prob: 0.36
-3 th guess is 11, prob: 0.07
-4 th guess is 23, prob: 0.07
-5 th guess is 19, prob: 0.02
-===================================
-```
 Example of correct classification (test image, first guess):
 
 ![correct][image3]
@@ -105,7 +91,20 @@ i:  10273 , label:  38, guess:  38
 5 th guess is  9, prob: 0.0
 ===================================
 ```
+Example of wrong classification (test image, first guess, second guess):
 
+![wrong][image2]
+
+```
+===================================
+i:  12563 , label:  30, guess:  21
+1 th guess is 21, prob: 0.47
+2 th guess is 30, prob: 0.36
+3 th guess is 11, prob: 0.07
+4 th guess is 23, prob: 0.07
+5 th guess is 19, prob: 0.02
+===================================
+```
 Total accuracy:
 ```
 Test accuracy:  93.14 %

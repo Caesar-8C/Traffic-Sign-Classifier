@@ -3,7 +3,6 @@ from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
 from tensorflow.keras import Model
 import numpy as np
 import pickle
-from plotter import Plotter
 
 train = pickle.load(open('trafsignsDataset/train_augmented.p', 'rb'))
 valid = pickle.load(open('trafsignsDataset/valid.p', 'rb'))
@@ -75,7 +74,6 @@ def test_step(images, labels):
 	test_accuracy(labels, predictions)
 
 EPOCHS = 30
-plotter = Plotter(host='infiny.ddns.net', port='6008')
 
 for epoch in range(EPOCHS):
 	for fun in [train_loss, train_accuracy, test_loss, test_accuracy]: fun.reset_states()
@@ -92,8 +90,5 @@ for epoch in range(EPOCHS):
 						  train_accuracy.result(),
 						  test_loss.result(),
 						  test_accuracy.result()))
-
-	plotter.plot('namer', 'train', epoch, train_loss.result(), ytype='log')
-	plotter.plot('namer', 'val', epoch, test_loss.result(), ytype='log')
 
 model.save('models/model4')
