@@ -33,6 +33,14 @@ German traffic signs.
 
 ## Project Description
 
+### Dataset
+
+German Traffic Sign Dataset: http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset
+
+This dataset contains 43 classes of German traffic signs. Each sample contains an image and its label.
+The images are cropped to contain mostly the sign, but some background is present.
+Images are taken in different light conditions and the signs vary in blurriness.
+
 ### Data Augmentation
 
 To train a neural network one needs a large dataset and no dataset is large enough.
@@ -74,6 +82,7 @@ Following parameters were chosen:
 * Batch size: 32
 * Activation function: RELU
 * Loss: Sparse Categorical Crossentropy
+* Optimizer: Adam
 
 ### Testing
 
@@ -91,6 +100,8 @@ i:  10273 , label:  38, guess:  38
 5 th guess is  9, prob: 0.0
 ===================================
 ```
+Softmax probability of 1.0 shows that the model is sure about the guess.
+
 Example of wrong classification (test image, first guess, second guess):
 
 ![wrong][image2]
@@ -105,6 +116,9 @@ i:  12563 , label:  30, guess:  21
 5 th guess is 19, prob: 0.02
 ===================================
 ```
+In this case, the model was not sure about its prediction
+and unfortunately a wrong guess got slightly higher probability.
+
 Total accuracy:
 ```
 Test accuracy:  93.14 %
@@ -165,6 +179,7 @@ Total accuracy on own images:
 Test accuracy:  80.0 %
 ```
 Bicycle on image 02 and 5 on image 09 were not classified correctly.
+Given so few images from own dataset we can say that accuracies are comparable.
 
 
 ### Problems and Solutions
