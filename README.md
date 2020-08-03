@@ -7,11 +7,9 @@ German traffic signs.
 
 [image0]: ./imgs/14.png
 [image1]: ./imgs/CNN.png
-[image2]: ./imgs/12563.png
-[image3]: ./imgs/21.png
-[image4]: ./imgs/30.png
-[image5]: ./imgs/10273.png
-[image6]: ./imgs/38.png
+[image2]: ./imgs/wrong.png
+[image3]: ./imgs/correct.png
+[image4]: ./imgs/27.png
 
 ## Prerequisites
 
@@ -81,9 +79,7 @@ Following parameters were chosen:
 
 Example of wrong classification (test image, first guess, second guess):
 
-![image 12563][image2]
-![class 21][image3]
-![class 30][image4]
+![wrong][image2]
 
 ```
 ===================================
@@ -97,8 +93,7 @@ i:  12563 , label:  30, guess:  21
 ```
 Example of correct classification (test image, first guess):
 
-![image 10273][image5]
-![class 38][image6]
+![correct][image3]
 
 ```
 ===================================
@@ -162,7 +157,9 @@ Class  40  P =  0.89 R =  0.94
 Class  41  P =  0.82 R =  0.9
 Class  42  P =  0.99 R =  0.88
 ```
-Precision and recall show that class 27 (a person in a triangle) was the hardest to classify correctly.
+Precision and recall show that class 27 was the hardest to classify correctly:
+
+![person_in_a_triangle][image4]
 
 Total accuracy on own images:
 ```
@@ -175,5 +172,5 @@ Bicycle on image 02 and 5 on image 09 were not classified correctly.
 
 * The network does not analyze traffic signs, it analyzes 32x32 images of signs.
 Which means the prediction is affected by the background. A solution could be to use
-another network for sighn detection that would find patterns like circles, squares and
+another network for sign detection that would find patterns like circles, squares and
 triangles and send only the region of interest to the classification network.
