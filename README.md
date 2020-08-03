@@ -29,9 +29,9 @@ German traffic signs.
 * main.py: creates, trains and saves the model
 * test.py: analyzes model performance using test data
 
-trafsignsDataset/classes: contains examples of all signs presented in the dataset
-trafsignsDataset/myImgs: images I took myself to test the model
-models/: contains trained model that was tested
+* trafsignsDataset/classes: contains examples of all signs presented in the dataset
+* trafsignsDataset/myImgs: images I took myself to test the model
+* models/: contains trained model that was tested
 
 ## Project Description
 
@@ -79,7 +79,7 @@ Following parameters were chosen:
 
 ### Testing
 
-Example of wrong classification:
+Example of wrong classification (test image, first guess, second guess):
 
 ![image 12563][image2]
 ![class 21][image3]
@@ -95,7 +95,7 @@ i:  12563 , label:  30, guess:  21
 5 th guess is 19, prob: 0.02
 ===================================
 ```
-Example of correct classification:
+Example of correct classification (test image, first guess):
 
 ![image 10273][image5]
 ![class 38][image6]
